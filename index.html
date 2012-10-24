@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DRCOM Contacts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<!-- link href="assets/css/base.css" rel="stylesheet" -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Contacts</a>
+        </div>
+      </div>
+    </div>
+
+	<section id="todoapp">
+		<header id="header">	
+		 <div class="container">		
+		  <a href="#myModal" valign="right" role="button" class="btn btn-small btn-primary" data-toggle="modal">Add</a>
+		
+		<!-- Add New (modal Screen)-->
+			  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				  <h3 id="myModalLabel">Contact</h3>
+				</div>
+				<div class="modal-body">
+				<table>
+					<tr>
+						<td width="150">First Name</td>
+						<td><input id="new-firstname" type="text"></td>
+					</tr>
+					<tr>
+						<td>Last Name</td>
+						<td><input id="new-lastname" type="text"></td>
+					</tr>
+					<tr>
+						<td>Birthday</td>
+						<td><input id="new-birthday" type="text"></td>
+					</tr>
+					<tr>
+						<td>Address</td>
+						<td><input id="new-address" type="text"></td>
+					</tr>
+					<tr>
+						<td>Zip Code</td>
+						<td><input id="new-zipcode" type="text"></td>
+					</tr>
+					<tr>
+						<td>Phone Number</td>
+						<td><input id="new-phoneno" type="text"></td>
+					</tr>
+				</table>
+				</div>
+				<div class="modal-footer">
+				  <button class="btn" data-dismiss="modal">Close</button>
+				  <button id="save-contact" class="btn btn-primary">Save changes</button>
+				</div>
+			  </div>
+			  </div>
+		<!-- End of Add New (modal screen)-->
+
+
+		</header>
+		<div class="container">		
+		<p>
+		<section id="main">
+					<input id="toggle-all" type="checkbox">
+					<label for="toggle-all">Mark all as complete</label>
+					<ul id="todo-list"></ul>
+		</section>
+		</p>
+		<p>
+			<a href="#filterModal" role="button" class="btn btn-small btn-primary" data-toggle="modal">Filter</a>
+		</p>
+		<!-- Filter (modal screen)-->
+			  <div id="filterModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				  <h3 id="filterModalLabel">Contact's Filter</h3>
+				</div>
+				<div class="modal-body">
+				<table>
+					<tr>
+						<td width="150">First Name</td>
+						<td><input id="new-firstname" type="text"></td>
+					</tr>
+					<tr>
+						<td>Last Name</td>
+						<td><input id="new-lastname" type="text"></td>
+					</tr>
+				</table>
+				</div>
+				<div class="modal-footer">
+				  <button class="btn" data-dismiss="modal">Reset</button>
+				  <button id="save-filter" class="btn btn-primary">Filter</button>
+				</div>
+			  </div>
+			  </div>
+		<!-- End of Filter (modal screen)-->
+
+		<footer id="footer">
+			<span id="todo-count"></span>
+			<button id="clear-completed">Clear completed</button>
+		</footer>
+	</section>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+	<script src="assets/js/base.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/jsonpath-0.8.0.js"></script>
+  </body>
+</html>
